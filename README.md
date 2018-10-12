@@ -1,2 +1,2 @@
 # Typing-speed-tester
-One-page simple functional page, needs a lot improvement
+One-page simple functional app, needs a lot improvement
