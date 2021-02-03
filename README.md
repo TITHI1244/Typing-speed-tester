@@ -5,6 +5,7 @@ About: This is a very simple application, where a user can test his/her typing c
 Used: HTML5, CSS3, JavaScript, Bootstrap, jQuery.
 
 Functionality in detail: 
+
     Basic functionality:
     --- User can start writing and the clock starts ticking immediately.
 
