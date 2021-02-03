@@ -1,6 +1,6 @@
 # Typing-speed-testing-app
 
-About: This is a very simple one-page application, where a user can test his/her typing capabilities. 
+About: This is a very simple application, where a user can test his/her typing capabilities. 
 
 Used: HTML5, CSS3, JavaScript, Bootstrap, jQuery.
 
