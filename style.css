@@ -48,25 +48,18 @@ body{
 	transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
 }
-.jumbotron{
-	background-color: #66a3a3;
-	padding: 100px;
-	margin-top: 150px;
-}
-.jumbotron a{
-	font-size: 100px;
-	text-decoration: none;
-	color: #e7d748;
-}
-div#mainTestArea{
+div#mainTextArea{
 	background-color: #cffefe;
 	padding: 40px;
 	color: #041717;
 }
-div#mainTestArea p, div#mainTestArea textarea{
+#actualText p{
 	font-size: 20px;
+	padding: 7%;
 }
-div#mainTestArea textarea{
+.textWrapper textarea{
+	font-size: 20px;
+	padding: 7%;
 	width: 100%;
 	border: 10px solid grey;
 	border-radius: 10px;
