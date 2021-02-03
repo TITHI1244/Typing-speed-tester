@@ -10,7 +10,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
 </head>
-<body id="myPage">
+<body> 
+	<!-- the navigation part -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -22,10 +23,6 @@
 			    <a class="navbar-brand" href="#myPage">Logo</a>			
 			</div>
 			<div class="collapse navbar-collapse" id="myNav">
-		        <ul class="nav navbar-nav">		   
-		            <li><a href="#about">About</a></li>	
-		            <li><a href="#start">Start now</a></li>	            		        
-		        </ul>
 		        <ul class="nav navbar-nav navbar-right">
 					<li><a class="btn" href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a></li>
 					<li><a href="#">Log In</a></li>
@@ -33,18 +30,22 @@
 		    </div>
 		</div>
 	</nav>
+	<!-- end of the navigation part -->
 
+	<!-- the header part -->
 	<div class="container-fluid text-center">
 	    <h1>Typer</h1>
-		<h4>Be the ultimate typer in the typing world</h4>
+		<h4>Practice is the key...</h4>
 	</div>
+	<!-- end of the header part -->
 
+	<!-- the modal part, to sign up -->
 	<div id="signUpModal" class="modal fade" role="dialog">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 				    <button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title text-center">Wanna sign up???</h4>
+					<h4 class="modal-title text-center">Hey welcome!!!</h4>
 				</div>
 
 				<div class="modal-body">
@@ -89,51 +90,43 @@
 				</div>
 				
 				<div class="modal-footer">
-					<button type="button" id="overlayBtn" class="btn btn-default" data-dismiss="modal">Done!</button>
+					<button type="submit" id="overlayBtn" class="btn btn-default" data-dismiss="modal">Save changes</button>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- end of the modal part -->
 
-<div id="overlay" class="alert alert-success alert-dismissable fade in">
-	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-	<div id="overlayText">Thank you for joining :)</div>
-</div>
+	<!-- the overlay part, that appears after signing up -->
+	<div id="overlay" class="alert alert-success alert-dismissable fade in">
+		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		<div id="overlayText">Thank you for joining :)</div>
+	</div>
+	<!-- end of the overlay part -->
 
-<div class="container" id="about">
-    <div class="col-sm-3">
-    	<p>...<span class="glyphicon glyphicon-pencil"></span></p>
-    </div>
-    <div class="col-sm-9">
-        <p>
-        	Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla.
-        </p>
-    </div> 
-</div>
-
-<div class="container">
-	<div class="text-center" id="mainTestArea">
-		<div class="row">
-			<div id="actualText" class="col-sm-6">
-				<p>Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text Some text.</p>
-			</div>
-			<div class="col-sm-6 textWrapper">
-				<textarea id="userInput" name="textarea" rows="10" placeholder="Start typing here... Good luck!"></textarea>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-offset-6 col-sm-6">
-				<div class="col-sm-3">
-				    <section class="time">
+	<!-- the text part, where all the fun awaits! -->
+	<div class="container">
+		<div class="text-center" id="mainTextArea">
+			<div class="row text-center">
+				<div class="col-sm-offset-8 col-sm-4">
+					<section class="time">
 						<div id="timer">00:00:00</div>
-					</section>
+					</section>				
+				</div>				
+			</div>
+			<div class="row">
+				<div id="actualText" class="col-sm-6">
+					<p></p>
 				</div>
-				<div class="col-sm-offset-5 col-sm-4">
-					<button id="startOver">Start over...</button>	
-				</div>					
-			</div>				
-		</div>	
+				<div class="col-sm-6 textWrapper">
+					<textarea id="userInput" name="textarea" rows="10" placeholder="Start typing here... Good luck!"></textarea>
+				</div>
+			</div>
+			<div class=" row text-center">
+				<button id="startOver">Start over...</button>
+			</div>		
+		</div>
 	</div>
-</div>
+	<!-- end of the text part -->
 </body>
 </html>
