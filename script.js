@@ -1,10 +1,9 @@
-var actualText = $("#actualText p").innerHTML;
-var textWrapper = $(".textWrapper");
+const actualText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
-var resetBtn = $("#startOver");
-var myTimer = $("#timer");
+const resetBtn = $("#startOver");
+const myTimer = $("#timer");
 
-var timer = [0,0,0,0],
+let timer = [0,0,0,0],
     interval,
     timerRunning = false;
 
@@ -52,7 +51,7 @@ function runTimer() {
 }
 
 
-var start = function(){
+const start = function(){
 	var textEnteredLength = $("textarea").val().length;
 	if (textEnteredLength === 0 && !timerRunning) {
         timerRunning = true;
@@ -61,21 +60,31 @@ var start = function(){
     console.log(textEnteredLength);
 };
 
-var spellingCheck = function(){
-	let textEntered = $("textarea").val();
-    let originTextMatch = $("#actualText p").html().substring(0,textEntered.length);
-
-    if (textEntered == $("#actualText p").html()) {
+const spellingCheck = function(){
+    const textEntered = $("textarea").val();
+    const wholeText = $("#actualText p").text();
+    const matchedText = wholeText.substring(0, textEntered.length);
+    const restOfText = wholeText.substring(textEntered.length, wholeText.length);
+    if (textEntered === $("#actualText p").text()) {
         clearInterval(interval);
         $("textarea").css("border-color","#429890");
+        $('#actualText p').addClass('correct');
     } else {
-        if (textEntered == originTextMatch) {
+        if (textEntered === matchedText) {
+            let changedSpan = changeColor(textEntered);
+            $('#actualText p').empty().prepend(changedSpan);
+            $('#actualText p').append(restOfText);
             $("textarea").css("border-color","#65CCf3");
         } else {
             $("textarea").css("border-color","#E95D0F");
         }
     }
 };
+
+function changeColor(text) {
+    const span = $('<span />').addClass('correct').html(text);
+    return span;
+}
 
 function reset() {
     clearInterval(interval);
@@ -84,6 +93,7 @@ function reset() {
     timerRunning = false;
 
     $("textarea").val("");
+    $('#actualText p').empty().removeClass("correct").text(actualText);
     $("#timer").html("00:00:00");
     $("textarea").css("border-color","grey");
 }

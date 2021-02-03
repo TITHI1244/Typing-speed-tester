@@ -19,7 +19,7 @@ body{
 	border: 0;
 }
 .navbar .navbar-brand, .navbar .navbar-nav li a, .navbar .navbar-right li a{
-	color: white;
+	color: #F0E68C;
 	font-size: 20px;
 }
 .navbar .navbar-brand:hover, .navbar .navbar-nav li a:hover, .navbar .navbar-right li a:hover{
@@ -44,7 +44,7 @@ body{
 	top: 50%;
 	left: 50%;
 	font-size: 50px;
-	color: white;
+	color: #F0E68C;
 	transform: translate(-50%,-50%);
 	-ms-transform: translate(-50%,-50%);
 }
@@ -58,26 +58,6 @@ body{
 	text-decoration: none;
 	color: #e7d748;
 }
-.container#about{
-	background-color: #b6fdfd;
-	padding: 40px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	font-size: 20px;
-	border-radius: 5px;
-	color: #041717;
-}
-.container#about .col-sm-3{
-	position: relative;
-	background-color: #b2d1d1;
-	padding: 120px;
-}
-.container#about .col-sm-3 p{
-	position: absolute;
-	top: 45%;
-	left: 45%;
-	font-weight: bolder;
-}
 div#mainTestArea{
 	background-color: #cffefe;
 	padding: 40px;
@@ -89,15 +69,17 @@ div#mainTestArea p, div#mainTestArea textarea{
 div#mainTestArea textarea{
 	width: 100%;
 	border: 10px solid grey;
-    border-radius: 10px;
+	border-radius: 10px;
+	outline: none;
 }
 #startOver{
-	background-color: #000a0a; 
+	background-color: #006666; 
 	color: #F0E68C;
     padding: 20px;
     font-weight: bold;
     font-size: 15px;
-    border-radius: 5px;
+	border-radius: 5px;
+	outline: none;
 }
 #startOver:hover{
     background-color: #F0E68C; 
@@ -111,4 +93,7 @@ div#mainTestArea textarea{
 #timer{
 	font-size: 40px;
 	font-weight: bold;
+}
+.correct {
+	background-color: #79cfcf;
 }
