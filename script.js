@@ -10,7 +10,6 @@ let timer = [0, 0, 0, 0],
 
 // when the document is loaded and ready
 $(document).ready(function(){
-
 	$("#alert").hide();
 
 	$("#overlayBtn").click(function(){

@@ -14,6 +14,56 @@ body{
 	text-transform: capitalize;
 	font-size: 30px;
 }
+.input-cursor {
+	display: inline-block;
+	width: 2px;
+	height: 40px;
+	background-color: white;
+	margin-left: 8px;
+	animation: blink .6s linear infinite alternate;
+  }
+  @keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+  .typing-text {
+	  width: 26%;
+	  margin: auto;
+  }
+  #sub-header {
+	overflow: hidden;
+	white-space: nowrap;
+	animation: typing 5s 1s infinite alternate;
+  }
+  @keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 26rem;
+	}
+}
+  #input-cursor {
+	position: relative;
+  }
+  #input-cursor::after {
+	content: "|";
+	position: absolute;
+	right: 0;
+	width: 100%;
+	animation: blink 1s forwards,
+	  caret 1s infinite;
+  }
+  
+  @keyframes blink {
+	  to { width: 0 }
+  }
+  @keyframes caret {
+	  50% { color: transparent }
+  }
+  
 .navbar{
 	background-color: #006666;
 	border: 0;
